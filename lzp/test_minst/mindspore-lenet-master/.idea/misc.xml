@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (mindsp-py37)" project-jdk-type="Python SDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="com.huawei.mind.studio.ssh.deploy.persistent.DeploySettingsState">
+    <option name="deployModels">
+      <list>
+        <DeployModel>
+          <option name="name" value="authoring-ssh.cncentral231.xckpjs.com" />
+          <option name="uuid" value="34099de1-43a4-4dae-ba42-ffe3a37bbc21" />
+          <option name="deployConnectionModel" value="{&quot;deployConnectionType&quot;:&quot;SFTP&quot;,&quot;sshConnectionModel&quot;:{&quot;uuid&quot;:&quot;b4fdd62e-3e4b-469b-a61a-ed4507b6956d&quot;}}" />
+          <option name="deployMappingModels" value="[{&quot;deploymentPath&quot;:&quot;/home/ma-user/work/MyDocuments/mindspore-lenet-demo&quot;,&quot;localPath&quot;:&quot;D:\\MyDocuments\\PyProjects\\mindspore-lenet-demo&quot;}]" />
+          <option name="deployExcludePathModels" value="[{&quot;excludePath&quot;:&quot;D:\\MyDocuments\\PyProjects\\pydemo\\.idea&quot;,&quot;pathType&quot;:&quot;LOCAL_PATH&quot;}]" />
+        </DeployModel>
+      </list>
+    </option>
+  </component>
+</project>

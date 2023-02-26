@@ -1,0 +1,403 @@
+{
+    "job_content": {
+        "SocInfo": {
+            "autoTilingMode": "NO_TUNE",
+            "coreNum": "",
+            "coreType": "AiCore",
+            "deviceId": "0",
+            "l1Fusion": "false",
+            "l2Fusion": "false",
+            "l2Mode": "2",
+            "mdl_bank_path": "",
+            "offlineTune": false,
+            "op_bank_path": "",
+            "op_bank_update": false,
+            "op_debug_dir": "./rank_0/",
+            "op_debug_level": "3",
+            "op_impl_mode": "",
+            "op_impl_mode_list": [],
+            "socVersion": "Ascend910A",
+            "vector_fp_ceiling": ""
+        },
+        "full_name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/gradConv2D/FusionOp_ReluGradV2_Cast-op166",
+        "fusion_op_name": "te_fusion_relu_grad_v2_cast_7632545593844235936_0",
+        "graph_name": "",
+        "l1_size": -1,
+        "op_list": [
+            {
+                "name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/max_pool2d-MaxPool2d/gradMaxPool/Cast-op160",
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/max_pool2d-MaxPool2d/gradMaxPool/Cast-op160",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/ReLUV2-op86_1",
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "uint8",
+                        "dtype": "uint8",
+                        "format": "ND",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/ReLUV2-op86_1",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            2
+                        ],
+                        "output_index": 1,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            2
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "dynamic_compile_static": false,
+                "func_name": "relu_grad_v2",
+                "input_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/max_pool2d-MaxPool2d/gradMaxPool/Cast-op160",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    },
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "uint8",
+                        "dtype": "uint8",
+                        "format": "ND",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/ReLUV2-op86_1",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            2
+                        ],
+                        "output_index": 1,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            2
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "int64mode": false,
+                "module_name": "impl.relu_grad_v2",
+                "name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/gradReLU/ReluGradV2-op97",
+                "op_name": "te_fusion_relu_grad_v2_cast_7632545593844235936_0",
+                "ori_name": [
+                    "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/gradConv2D/FusionOp_ReluGradV2_Cast-op166"
+                ],
+                "output_data_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                32,
+                                32
+                            ],
+                            [
+                                1,
+                                1
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                16,
+                                16
+                            ]
+                        ],
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/gradReLU/ReluGradV2-op97",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "pattern": "ElemWise",
+                "py_module_path": "/usr/local/Ascend/opp/op_impl/built-in/ai_core/tbe",
+                "type": "ReluGradV2",
+                "unknown_shape": false
+            },
+            {
+                "attr_desc": [
+                    1
+                ],
+                "attrs": [
+                    {
+                        "dtype": "int32",
+                        "name": "dst_type",
+                        "valid": true,
+                        "value": 1
+                    }
+                ],
+                "dynamic_compile_static": false,
+                "func_name": "cast",
+                "input_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/gradReLU/ReluGradV2-op97",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "int64mode": false,
+                "module_name": "impl.cast",
+                "name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/gradConv2D/Cast-op157",
+                "op_name": "te_fusion_relu_grad_v2_cast_7632545593844235936_0",
+                "ori_name": [
+                    "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/gradConv2D/FusionOp_ReluGradV2_Cast-op166"
+                ],
+                "output_data_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "NC1HWC0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                32,
+                                32
+                            ],
+                            [
+                                1,
+                                1
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                16,
+                                16
+                            ]
+                        ],
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "NC1HWC0",
+                        "name": "Gradients/Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/gradConv2D/Cast-op157",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "pattern": "ElemWise",
+                "py_module_path": "/usr/local/Ascend/opp/op_impl/built-in/ai_core/tbe",
+                "type": "Cast",
+                "unknown_shape": false
+            }
+        ],
+        "scope_id": 8
+    },
+    "job_id": 18371,
+    "job_type": "FusionOpCompile",
+    "source_id": 0
+}

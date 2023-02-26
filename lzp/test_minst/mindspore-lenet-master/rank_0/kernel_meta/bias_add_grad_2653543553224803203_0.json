@@ -1,0 +1,14 @@
+{
+    "KBHit":false,
+    "binFileName":"bias_add_grad_2653543553224803203_0",
+    "binFileSuffix":".o",
+    "blockDim":6,
+    "kernelName":"bias_add_grad_2653543553224803203_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        1
+    ],
+    "sha256":"8784fffe46bc8f350ae3eec75356ed813bf78d2d8be3d94d1a39de9a8742006d"
+}

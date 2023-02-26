@@ -1,0 +1,577 @@
+{
+    "job_content": {
+        "SocInfo": {
+            "autoTilingMode": "NO_TUNE",
+            "coreNum": "",
+            "coreType": "AiCore",
+            "deviceId": "0",
+            "l1Fusion": "false",
+            "l2Fusion": "false",
+            "l2Mode": "2",
+            "mdl_bank_path": "",
+            "offlineTune": false,
+            "op_bank_path": "",
+            "op_bank_update": false,
+            "op_debug_dir": "./rank_0/",
+            "op_debug_level": "3",
+            "op_impl_mode": "",
+            "op_impl_mode_list": [],
+            "socVersion": "Ascend910A",
+            "vector_fp_ceiling": ""
+        },
+        "full_name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/FusionOp_Conv2D_ReLUV2-op172",
+        "fusion_op_name": "te_fusion_conv2d_relu_v2_3396858434328880508_0",
+        "graph_name": "",
+        "l1_size": -1,
+        "op_list": [
+            {
+                "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/max_pool2d-MaxPool2d/MaxPoolWithArgmax-op85",
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "NC1HWC0",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/max_pool2d-MaxPool2d/MaxPoolWithArgmax-op85",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            6,
+                            14,
+                            14
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            14,
+                            14,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/Cast-op156",
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "FRACTAL_Z",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/Cast-op156",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            16,
+                            6,
+                            5,
+                            5
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            25,
+                            1,
+                            16,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "name": "optional_0",
+                "output_desc": [
+                    {
+                        "data_type": 0,
+                        "name": "optional_0",
+                        "shape": "NULL"
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "name": "optional_1",
+                "output_desc": [
+                    {
+                        "data_type": 0,
+                        "name": "optional_1",
+                        "shape": "NULL"
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "attr_desc": [
+                    [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    1,
+                    "NCHW",
+                    0
+                ],
+                "attrs": [
+                    {
+                        "dtype": "list_int32",
+                        "name": "stride",
+                        "valid": true,
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "dtype": "list_int32",
+                        "name": "pad_list",
+                        "valid": true,
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "dtype": "list_int32",
+                        "name": "dilation",
+                        "valid": true,
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "dtype": "int32",
+                        "name": "groups",
+                        "valid": true,
+                        "value": 1
+                    },
+                    {
+                        "dtype": "str",
+                        "name": "format",
+                        "valid": true,
+                        "value": "NCHW"
+                    },
+                    {
+                        "dtype": "int32",
+                        "name": "offset_x",
+                        "valid": true,
+                        "value": 0
+                    }
+                ],
+                "dynamic_compile_static": false,
+                "func_name": "conv2d",
+                "input_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "NC1HWC0",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/max_pool2d-MaxPool2d/MaxPoolWithArgmax-op85",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            6,
+                            14,
+                            14
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            14,
+                            14,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    },
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "FRACTAL_Z",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/Cast-op156",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            16,
+                            6,
+                            5,
+                            5
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            25,
+                            1,
+                            16,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    },
+                    {
+                        "data_type": 0,
+                        "name": "optional_0",
+                        "shape": "NULL"
+                    },
+                    {
+                        "data_type": 0,
+                        "name": "optional_1",
+                        "shape": "NULL"
+                    }
+                ],
+                "int64mode": false,
+                "module_name": "impl.conv2d",
+                "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/Conv2D-op12",
+                "op_name": "te_fusion_conv2d_relu_v2_3396858434328880508_0",
+                "ori_name": [
+                    "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/FusionOp_Conv2D_ReLUV2-op172"
+                ],
+                "output_data_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                32,
+                                32
+                            ],
+                            [
+                                1,
+                                1
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                16,
+                                16
+                            ]
+                        ],
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/Conv2D-op12",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "pattern": "Convolution",
+                "py_module_path": "/usr/local/Ascend/opp/op_impl/built-in/ai_core/tbe",
+                "type": "Conv2D",
+                "unknown_shape": false
+            },
+            {
+                "dynamic_compile_static": false,
+                "func_name": "relu_v2",
+                "input_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/conv2-Conv2d/Conv2D-op12",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "int64mode": false,
+                "module_name": "impl.relu_v2",
+                "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/ReLUV2-op86",
+                "op_name": "te_fusion_conv2d_relu_v2_3396858434328880508_0",
+                "ori_name": [
+                    "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/FusionOp_Conv2D_ReLUV2-op172"
+                ],
+                "output_data_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                32,
+                                32
+                            ],
+                            [
+                                1,
+                                1
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                16,
+                                16
+                            ]
+                        ],
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    },
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "uint8",
+                        "dtype": "uint8",
+                        "format": "ND",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            2
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                32,
+                                32
+                            ],
+                            [
+                                1,
+                                1
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                10,
+                                10
+                            ],
+                            [
+                                2,
+                                2
+                            ]
+                        ],
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            2
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "NC1HWC0",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/ReLUV2-op86",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            16,
+                            10,
+                            10
+                        ],
+                        "output_index": 0,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    },
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "uint8",
+                        "dtype": "uint8",
+                        "format": "ND",
+                        "name": "Default/network-TrainOneStepCell/network-WithLossCell/_backbone-BaseClassifier/backbone-LeNet5/relu-ReLU/ReLUV2-op86_1",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            2
+                        ],
+                        "output_index": 1,
+                        "shape": [
+                            32,
+                            1,
+                            10,
+                            10,
+                            2
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "pattern": "ElemWise",
+                "py_module_path": "/usr/local/Ascend/opp/op_impl/built-in/ai_core/tbe",
+                "type": "ReluV2",
+                "unknown_shape": false
+            }
+        ],
+        "scope_id": 2
+    },
+    "job_id": 18377,
+    "job_type": "FusionOpCompile",
+    "source_id": 0
+}

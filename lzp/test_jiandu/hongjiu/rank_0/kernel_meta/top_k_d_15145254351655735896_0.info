@@ -1,0 +1,329 @@
+{
+    "job_content": {
+        "SocInfo": {
+            "autoTilingMode": "NO_TUNE",
+            "coreNum": "",
+            "coreType": "AiCore",
+            "deviceId": "0",
+            "l1Fusion": "false",
+            "l2Fusion": "false",
+            "l2Mode": "2",
+            "mdl_bank_path": "",
+            "offlineTune": false,
+            "op_bank_path": "",
+            "op_bank_update": false,
+            "op_debug_dir": "./rank_0/",
+            "op_debug_level": "3",
+            "op_impl_mode": "",
+            "op_impl_mode_list": [],
+            "socVersion": "Ascend910A",
+            "vector_fp_ceiling": ""
+        },
+        "full_name": "Default/TopK-op9",
+        "fusion_op_name": "top_k_d_15145254351655735896_0",
+        "graph_name": "",
+        "l1_size": -1,
+        "op_list": [
+            {
+                "name": "x_0",
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "ND",
+                        "name": "x_0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            128
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                128,
+                                128
+                            ]
+                        ],
+                        "shape": [
+                            128
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid": true,
+                        "valid_shape": []
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "name": "assist_seq_0",
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "ND",
+                        "name": "assist_seq_0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            8192
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                8192,
+                                8192
+                            ]
+                        ],
+                        "shape": [
+                            8192
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid": true,
+                        "valid_shape": []
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "attr_desc": [
+                    5,
+                    true,
+                    -1,
+                    true
+                ],
+                "attrs": [
+                    {
+                        "dtype": "int32",
+                        "name": "k",
+                        "valid": true,
+                        "value": 5
+                    },
+                    {
+                        "dtype": "bool",
+                        "name": "sorted",
+                        "valid": true,
+                        "value": true
+                    },
+                    {
+                        "dtype": "int32",
+                        "name": "dim",
+                        "valid": true,
+                        "value": -1
+                    },
+                    {
+                        "dtype": "bool",
+                        "name": "largest",
+                        "valid": true,
+                        "value": true
+                    }
+                ],
+                "build_type": "accurately_build",
+                "dynamic_compile_static": false,
+                "func_name": "top_k_d",
+                "input_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "ND",
+                        "name": "x_0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            128
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                128,
+                                128
+                            ]
+                        ],
+                        "shape": [
+                            128
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid": true,
+                        "valid_shape": []
+                    },
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "ND",
+                        "name": "assist_seq_0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            8192
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                8192,
+                                8192
+                            ]
+                        ],
+                        "shape": [
+                            8192
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid": true,
+                        "valid_shape": []
+                    }
+                ],
+                "int64mode": false,
+                "max_kernel_id": 10,
+                "miss_support_info": "",
+                "module_name": "impl.top_k_d",
+                "name": "Default/TopK-op9",
+                "op_name": "top_k_d_15145254351655735896_0",
+                "ori_name": [
+                    "Default/TopK-op9"
+                ],
+                "output_data_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "ND",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            5
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                5,
+                                5
+                            ]
+                        ],
+                        "shape": [
+                            5
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    },
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "int32",
+                        "dtype": "int32",
+                        "format": "ND",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            5
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                5,
+                                5
+                            ]
+                        ],
+                        "shape": [
+                            5
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid_shape": []
+                    }
+                ],
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float16",
+                        "dtype": "float16",
+                        "format": "ND",
+                        "name": "values",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            5
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                5,
+                                5
+                            ]
+                        ],
+                        "shape": [
+                            5
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid": true,
+                        "valid_shape": []
+                    },
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "int32",
+                        "dtype": "int32",
+                        "format": "ND",
+                        "name": "indices",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            5
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                5,
+                                5
+                            ]
+                        ],
+                        "shape": [
+                            5
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid": true,
+                        "valid_shape": []
+                    }
+                ],
+                "pattern": "Opaque",
+                "py_module_path": "/usr/local/Ascend/opp/op_impl/built-in/ai_core/tbe",
+                "type": "TopK",
+                "unknown_shape": false
+            }
+        ],
+        "scope_id": -1
+    },
+    "job_id": 10832,
+    "job_type": "Compile",
+    "source_id": 0
+}
